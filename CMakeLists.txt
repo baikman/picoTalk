@@ -35,7 +35,7 @@ pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(picoTalk picoTalk.c )
+add_executable(picoTalk picoTalk.c ssd1306/ssd1306.c st7789v/st7789v.c)
 
 pico_set_program_name(picoTalk "picoTalk")
 pico_set_program_version(picoTalk "0.1")
@@ -57,8 +57,6 @@ target_include_directories(picoTalk PRIVATE
 target_link_libraries(picoTalk 
         hardware_spi
         hardware_i2c
-        
         )
 
 pico_add_extra_outputs(picoTalk)
-

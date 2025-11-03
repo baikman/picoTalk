@@ -21,7 +21,7 @@ int main() {
     spi_inst_t *spi = spi0;
 
     ssd1306_init(i2c, I2C_SDA, I2C_SCL, SSD1306_I2C_ADDR);
-    st7789v_init(spi, PIN_CS, PIN_SCK, PIN_MOSI);
+    // st7789v_init(spi, PIN_CS, PIN_SCK, PIN_MOSI);
 
     ssd1306_blink(10, 50);
 }
